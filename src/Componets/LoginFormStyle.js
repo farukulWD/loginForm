@@ -4,7 +4,6 @@ const LoginFormWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   @media only screen and (max-width: 480px) {
     width: 100%;
     flex-direction: column-reverse;
@@ -34,7 +33,7 @@ export const AnimationContainer = styled.div`
 
 export const FormWrapper = styled.div`
   background-color: #fff;
-  padding: 50px;
+  padding: ${(props) => (props.small ? "10px" : "50px")};
   width: 50%;
 
   border-radius: 5px;
@@ -51,18 +50,18 @@ export const FormWrapper = styled.div`
 export const Form = styled.form``;
 export const Heading = styled.h1`
   font-size: 30px;
-  color: #ffad7b;
+  color: #fff;
 `;
 export const SubHeading = styled.h2`
   font-size: 24px;
-  color: #000000;
+  color: #fff;
 `;
 export const PasswordInputStyle = styled.div`
   position: relative;
 `;
 
 export const Input = styled.input`
-  width: 97%;
+  width: ${(props) => (props.full ? "95%" : "97%")};
   font-size: 16px;
   padding: 12px 7.9px;
   margin: 10px 0;
@@ -79,6 +78,7 @@ export const Input = styled.input`
     width: 96%;
   }
 `;
+
 export const ShowHideButton = styled.span`
   position: absolute;
   top: 50%;
@@ -106,6 +106,7 @@ export const Button = styled.button`
     background-color: #ffbd8b;
   }
 `;
+
 export const DisableButton = styled.button`
   width: 100%;
   padding: 10px;
@@ -117,12 +118,14 @@ export const DisableButton = styled.button`
   margin-top: 3px;
   transition: background-color 0.3s;
 `;
+
 export const ForgotPassword = styled.p`
   text-align: right;
   margin-top: -10px;
   cursor: pointer;
   color: blue;
 `;
+
 export const SocialButton = styled(Button)`
   background-color: white;
   border: 1px solid #ffad7b;

@@ -2,13 +2,10 @@ import styled from "styled-components";
 
 export const AppWrapper = styled.section`
   min-height: 100vh;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 0, 160, 0.3),
-      rgba(255, 0, 200, 0.3)
-    ),
-    url(https://i.ibb.co/26Sy6mz/6938839-3409297.jpg);
-  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to bottom, #ff5722, #e91e63);
   padding: 10px;
   @media only screen and (min-width: 350px) and (max-width: 480px) {
     min-height: 100vh;

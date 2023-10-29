@@ -6,6 +6,7 @@ import LoginFormWrapper, {
   ForgotPassword,
   Form,
   FormWrapper,
+  Heading,
   Input,
   PasswordInputStyle,
   ShowHideButton,
@@ -18,12 +19,22 @@ import Lottie from "lottie-react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import loginAnimation from "./loginAnimation.json";
 import HorizontalLineWithCenteredText from "./HorizontalLineWithText/HorizontalLineWithText";
+import ForgotPasswordModal from "./ForgotPasswordModal/ForgotPasswordModal";
 
 const LoginForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [verified, setVerified] = useState(false);
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
+  };
+  const [isForgotPasswordModalOpen, setForgotPasswordModalOpen] =
+    useState(false);
+  const openForgotPasswordModal = () => {
+    setForgotPasswordModalOpen(true);
+  };
+
+  const closeForgotPasswordModal = () => {
+    setForgotPasswordModalOpen(false);
   };
 
   function onChange(value) {
@@ -67,7 +78,13 @@ const LoginForm = () => {
               )}
             </ShowHideButton>
           </PasswordInputStyle>
-          <ForgotPassword>Forgot Password ?</ForgotPassword>
+          <ForgotPassword onClick={openForgotPasswordModal}>
+            Forgot Password ?
+          </ForgotPassword>
+          <ForgotPasswordModal
+            isOpen={isForgotPasswordModalOpen}
+            onClose={closeForgotPasswordModal}
+          />
           <ReCAPTCHA
             sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
             onChange={onChange}
@@ -93,6 +110,7 @@ const LoginForm = () => {
       </FormWrapper>
 
       <AnimationContainer>
+        <Heading>Please Login Here</Heading>
         <Lottie animationData={loginAnimation} loop={true} />
       </AnimationContainer>
     </LoginFormWrapper>
