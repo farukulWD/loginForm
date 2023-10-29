@@ -1,15 +1,16 @@
 import React from "react";
 import LoginForm from "./Componets/LoginForm";
 import { Heading } from "./Componets/LoginFormStyle";
+import ContentWrapper, { AppWrapper } from "./AppStyle";
 
 function App() {
   return (
-    <div style={{ padding: "10px" }}>
-      <div style={{ width: "70%", margin: "0 auto", textAlign: "center" }}>
-        <Heading>Login</Heading>
+    <AppWrapper>
+      <ContentWrapper>
+        <Heading>Please Login Here</Heading>
         <LoginForm></LoginForm>
-      </div>
-    </div>
+      </ContentWrapper>
+    </AppWrapper>
   );
 }
 
