@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const AppWrapper = styled.section`
   min-height: 100vh;
-  display: flex;
-  margin: 0 auto;
   background: linear-gradient(
       0deg,
       rgba(255, 0, 160, 0.3),

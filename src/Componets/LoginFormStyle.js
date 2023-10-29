@@ -5,7 +5,7 @@ const LoginFormWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (min-width: 350px) and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     width: 100%;
     flex-direction: column-reverse;
     height: auto;
@@ -21,9 +21,10 @@ const LoginFormWrapper = styled.div`
     height: auto;
   }
 `;
+
 export const AnimationContainer = styled.div`
   width: 50%;
-  @media only screen and (min-width: 350px) and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     width: 100%;
   }
   @media only screen and(min-width:481px) and (max-width: 768px) {
@@ -37,7 +38,7 @@ export const FormWrapper = styled.div`
   width: 50%;
 
   border-radius: 5px;
-  @media only screen and (min-width: 350px) and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     width: 100%;
     padding: 5px;
   }
@@ -67,7 +68,7 @@ export const Input = styled.input`
   margin: 10px 0;
   border: 1px solid #ffad7b;
   border-radius: 3px;
-  @media only screen and (min-width: 350px) and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     padding: 10px 10px;
     display: block;
     width: 94%;
@@ -97,6 +98,7 @@ export const Button = styled.button`
   border: none;
   font-size: 18px;
   border-radius: 3px;
+  margin-top: 3px;
   cursor: pointer;
   transition: background-color 0.3s;
 
@@ -104,7 +106,23 @@ export const Button = styled.button`
     background-color: #ffbd8b;
   }
 `;
-
+export const DisableButton = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: #ffad7b;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-top: 3px;
+  transition: background-color 0.3s;
+`;
+export const ForgotPassword = styled.p`
+  text-align: right;
+  margin-top: -10px;
+  cursor: pointer;
+  color: blue;
+`;
 export const SocialButton = styled(Button)`
   background-color: white;
   border: 1px solid #ffad7b;
@@ -120,7 +138,7 @@ export const SocialLoginWrapper = styled.div`
   justify-content: space-between;
   gap: 10px;
   margin: 10px 0px;
-  @media only screen and (max-width: 350px) and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     flex-direction: column;
   }
 `;
