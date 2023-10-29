@@ -5,7 +5,13 @@ const LoginFormWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    width: 100%;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  @media only screen and (max-width: 768px) {
     display: flex;
     width: 100%;
     flex-direction: column-reverse;
@@ -14,7 +20,10 @@ const LoginFormWrapper = styled.div`
 `;
 export const AnimationContainer = styled.div`
   width: 50%;
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -25,7 +34,11 @@ export const FormWrapper = styled.div`
   width: 50%;
 
   border-radius: 5px;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    padding: 5px;
+  }
+  @media only screen and (max-width: 768px) {
     width: 100%;
     padding: 5px;
   }
@@ -51,9 +64,13 @@ export const Input = styled.input`
   margin: 10px 0;
   border: 1px solid #ffad7b;
   border-radius: 3px;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 480px) {
     padding: 10px;
     width: 92%;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 10px;
+    width: 97%;
   }
 `;
 export const ShowHideButton = styled.span`
@@ -96,7 +113,7 @@ export const SocialButton = styled(Button)`
 export const SocialLoginWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 5px;
+  gap: 10px;
   margin: 10px 0px;
   @media only screen and (max-width: 500px) {
     flex-direction: column;

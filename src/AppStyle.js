@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const AppWrapper = styled.section`
   min-height: 100vh;
+  display: flex;
+  justify-items: center;
   background: linear-gradient(
       0deg,
       rgba(255, 0, 160, 0.3),
@@ -16,6 +18,9 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `;

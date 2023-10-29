@@ -15,12 +15,14 @@ import { BsGoogle, BsFacebook } from "react-icons/bs";
 import Lottie from "lottie-react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import loginAnimation from "./loginAnimation.json";
+import HorizontalLineWithCenteredText from "./HorizontalLineWithText/HorizontalLineWithText";
 
 const LoginForm = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
+
   return (
     <LoginFormWrapper>
       <FormWrapper>
@@ -42,9 +44,8 @@ const LoginForm = () => {
           </PasswordInputStyle>
           <Button type="submit">Login</Button>
         </Form>
-
         {/* Social Login Area */}
-        <SubHeading>OR Login With</SubHeading>
+        <HorizontalLineWithCenteredText text="OR" />
         <SocialLoginWrapper>
           <SocialButton>
             <BsGoogle></BsGoogle>
