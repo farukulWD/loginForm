@@ -45,7 +45,7 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const email = form.email.value;
+    const email = form.username.value;
     const password = form.password.value;
     const data = { email, password };
     console.log(data);
@@ -58,9 +58,9 @@ const LoginForm = () => {
         {/* Form Area */}
         <Form onSubmit={(e) => handleSubmit(e)}>
           <Input
-            type="email"
-            name="email"
-            placeholder="Type your email"
+            type="username"
+            name="username"
+            placeholder="Type your username"
             required
           />
           <PasswordInputStyle>
