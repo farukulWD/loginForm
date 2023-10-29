@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const AppWrapper = styled.section`
   min-height: 100vh;
   display: flex;
-  justify-items: center;
+  margin: 0 auto;
   background: linear-gradient(
       0deg,
       rgba(255, 0, 160, 0.3),
@@ -12,6 +12,9 @@ export const AppWrapper = styled.section`
     url(https://i.ibb.co/26Sy6mz/6938839-3409297.jpg);
   background-size: cover;
   padding: 10px;
+  @media only screen and (min-width: 350px) and (max-width: 480px) {
+    min-height: 100vh;
+  }
 `;
 const ContentWrapper = styled.div`
   width: 70%;

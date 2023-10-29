@@ -5,14 +5,17 @@ const LoginFormWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: 480px) {
-    display: flex;
+  @media only screen and (min-width: 350px) and (max-width: 480px) {
     width: 100%;
     flex-direction: column-reverse;
     height: auto;
   }
-  @media only screen and (max-width: 768px) {
-    display: flex;
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
     width: 100%;
     flex-direction: column-reverse;
     height: auto;
@@ -20,10 +23,10 @@ const LoginFormWrapper = styled.div`
 `;
 export const AnimationContainer = styled.div`
   width: 50%;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (min-width: 350px) and (max-width: 480px) {
     width: 100%;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and(min-width:481px) and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -34,11 +37,11 @@ export const FormWrapper = styled.div`
   width: 50%;
 
   border-radius: 5px;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (min-width: 350px) and (max-width: 480px) {
     width: 100%;
     padding: 5px;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and(min-width: 481px) and (max-width: 768px) {
     width: 100%;
     padding: 5px;
   }
@@ -64,13 +67,15 @@ export const Input = styled.input`
   margin: 10px 0;
   border: 1px solid #ffad7b;
   border-radius: 3px;
-  @media only screen and (max-width: 480px) {
-    padding: 10px;
-    width: 92%;
+  @media only screen and (min-width: 350px) and (max-width: 480px) {
+    padding: 10px 10px;
+    display: block;
+    width: 94%;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
     padding: 10px;
-    width: 97%;
+    display: block;
+    width: 96%;
   }
 `;
 export const ShowHideButton = styled.span`
@@ -115,7 +120,7 @@ export const SocialLoginWrapper = styled.div`
   justify-content: space-between;
   gap: 10px;
   margin: 10px 0px;
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 350px) and (max-width: 480px) {
     flex-direction: column;
   }
 `;
